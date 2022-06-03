@@ -3,30 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ModularbeitM335.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Modul 335" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Spiele Datenbank" FontSize="Title" Padding="30,10,30,10"/>
-        <Label FontSize="16" Padding="30,24,30,0">
+    <StackLayout Margin="20,35,20,20">
+        <Entry x:Name="nameEntry"
+               Placeholder="Enter name" />
+        <Entry x:Name="devEntry"
+               Placeholder="Enter developer" />
 
-        </Label>
-        <Label>Gib den Namen des Spieles an</Label>
-        <Entry x:Name="gamename" Placeholder="Name" >
-        </Entry>
-        <Label>Gib den Namen des Entwicklers an</Label>
+        <Label Text="Release Date:" />
 
-        <Entry x:Name="devname" Placeholder="Entwickler" >
-        </Entry>
-        <Label>Gib das Veröffentlichkeitsdatum des spieles an</Label>
+        <DatePicker x:Name="releaseDatePicker"
+                    Format="D"
+                    Margin="30, 0, 0, 30"/>
 
-        <DatePicker x:Name="DOB"></DatePicker>
-        <StackLayout Orientation="Horizontal">
-            <Button Text="submit" Clicked="submit"></Button>
-        </StackLayout>
-        
-        
 
+        <Button Text="Add to Database"
+                Clicked="OnButtonClicked" />
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding name}"
+                               FontSize="Medium" />
+                        <Label Text="{Binding developer}"
+                               TextColor="Silver"
+                               FontSize="Small" />
+                        <Label Text="{Binding releasedate}"
+                               TextColor="Silver"
+                               FontSize="Small" />
+                        <Label Text=""></Label>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </StackLayout>
 
 </ContentPage>
