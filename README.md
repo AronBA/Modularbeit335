@@ -6,7 +6,10 @@
 	2. XAML-Dateien für den Einsatz von Bildschirmausgaben erstellen
 	3. Einsatz von SQLite als Speichermedium in Android Mobile
 
-<img align="right" src="https://user-images.githubusercontent.com/72823328/171964938-b7fd24a0-cd06-49be-b167-a53f3a3fb23c.png" style="height: 500px">
+<img align="right" src="https://user-images.githubusercontent.com/72823328/192141579-01f2fcf3-43e6-40a0-9660-94047b99fa75.png" style="height: 500px">
+
+
+
 
 ## Projektbeschreibung
 Es soll eine Applikation Mit Visual Studio 2019 oder neuer erstellt werden, die es ermöglicht Spiele in eine Maske einzugeben und diese dann in einer Übersicht anzeigen zu lassen.
